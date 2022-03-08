@@ -1,13 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <hi>aqui iria el titulo de la pagina</hi>
-    <P> esto es un parrafo</P>
-</body>
-</html>
+// UNIV. TARQUI TICONA CARLOS JAVIER
+// LABORATORIO 2 - PROGRAMACION 
+// DOS ECUACIONES CON DOS INCOGNITAS
+
+#include <iostream> 
+
+using namespace std;
+
+int main()
+{
+float x1,y1,in1,x2,y2,in2,y,x,z,xr,yr,zr;
+    cout<< "                       UNIV. TARQUI TICONA CARLOS JAVIER      "<<endl;
+    cout<<"       EL PROGRAMA PRESENTE, ES PARA LA RESOLUCION DOS ECUACIONES CON DOS INCOGNITAS"<<endl;
+    cout<<"CON LA PRIMERA ECUACION"<<endl;
+    cout<<"INGRESE EL VALOR DE X: ";
+    cin>>x1;
+    cout<<"INGRESE EL VALOR DE Y: ";
+    cin>>y1;
+    cout<<"INGRESE EL VALOR DEL TERMINO INDEPENDIENTE: ";
+    cin>>in1;
+    cout<<endl<<endl;
+    cout<<"CON LA SEGUNDA ECUACION"<<endl;
+    cout<<"INGRESE EL VALOR DE X: ";
+    cin>>x2;
+    cout<<"INGRESE EL VALOR DE Y: ";
+    cin>>y2;
+    cout<<"INGRESE EL VALOR DEL TERMINO INDEPENDIENTE: ";
+    cin>>in2;
+    cout<<endl<<endl;
+x=-x2*x1;
+y=-x2*y1;
+z=-x2*in1;
+
+xr=x1*x2;
+yr=x1*y2;
+zr=x1*in2;
+
+x=x+xr;
+y=y+yr;
+z=z+zr;
+y=z/y;
+
+z=in1-y*y1;
+x=z/x1;
+
+cout<<"EL VALOR DE Y ES: "<<y<<endl;
+cout<<"EL VALOR DE X ES: "<<x<<endl;
+
+system("pause");
+
+return 0;
+}
