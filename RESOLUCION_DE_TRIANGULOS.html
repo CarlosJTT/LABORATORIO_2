@@ -11,7 +11,7 @@ main ()
 {
 	int op;
 	
-	while(op !=3)
+	while(op !=5)
 	{
 		cout<<"1) SABIENDO LOS TRES LADOS"<<endl;
 		cout<<"2) SABIENDO LOS TRES LADOS"<<endl;
@@ -21,6 +21,97 @@ main ()
 		
 		switch(op)
 		{
+			case 3:
+				int eligir;
+				while (eligir !=2)
+				{
+					cout<<"1) SE CONOCE UN LADO Y DOS ANGULOS ADYACENTE"<<endl;
+					cout<<"2) SE CONOCE UN LADO Y UN DE LOS ANGULOS ADYACENTE Y EL OTRO ANGULO, EL OPUESTO"<<endl;
+					cin>>op;
+					
+					switch (op)
+					{
+						case 1:
+							system("cls");
+							float a3,B3,C3,A3,X3,Y3,Z3,b3,c3,P3,S3,AREA3,Ma3,Mb3,Mc3,ha3,hb3,hc3;
+							cout<<"              UNIV. TARQUI TICONA CARLOS JAVIER          "<<endl;
+							cout<<"INGRESE EL LADO a"<<endl;
+							cin>> a3;
+							cout<<"INGRESE EL ANGULO B (GRADOS)"<<endl;
+							cin>> B3;
+							cout<<"INGRESE EL ANGULO C (GRADOS)"<<endl;
+							cin>> C3;
+							A3 = 180-B3-C3;
+							X3 = A3*0.017533;
+							Y3 = B3*0.017533;
+							Z3 = C3*0.017533;
+							b3 = (a3*sin(Y3))/(sin(X3));
+							c3 = (a3*sin(Z3))/(sin(X3));
+							P3 = a3+b3+c3;
+							S3 = P3/2;
+							AREA3 = sqrt(S3*(S3-a3)*(S3-b3)*(S3-c3));
+							Ma3 = (sqrt(2*((b3*b3)+(c3*c3))-(a3*a3)))/2;
+							Mb3 = (sqrt(2*((a3*a3)+(c3*c3))-(b3*b3)))/2;
+							Mc3 = (sqrt(2*((a3*a3)+(b3*b3))-(c3*c3)))/2;
+							ha3 = (2*AREA3)/a3;
+							hb3 = (2*AREA3)/b3;
+							hc3 = (2*AREA3)/c3;
+							cout<<"EL PERIMETRO ES DE: "<<P3<<"[u]"<<endl;
+							cout<<"EL AREA ES DE: "<<AREA3<<"[u^2]"<<endl;
+							cout<<"EL LADO b ES DE: "<<b3<<"[u]"<<endl;
+							cout<<"EL LASO c ES DE: "<<c3<<"[u]"<<endl;
+							cout<<"EL ANGULO A ES DE: "<<A3<<"°"<<endl;
+							cout<<"LA MEDIANA DE Ma ES DE: "<<Ma3<<"[u]"<<endl;
+				            cout<<"LA MEDIANA DE Mb ES DE: "<<Mb3<<"[u]"<<endl;
+				            cout<<"LA MEDIANA DE Mc ES DE: "<<Mc3<<"[u]"<<endl;
+				            cout<<"LA ALTURA DE ha ES DE: "<<ha3<<"[u]"<<endl;
+			            	cout<<"LA ALTURA DE hb ES DE: "<<hb3<<"[u]"<<endl;
+			            	cout<<"LA ALTURA DE hc ES DE: "<<hc3<<"[u]"<<endl;
+			            	
+			            	system ("pause");
+			            break;
+			            
+			            case 2:
+			            	system("cls");
+							float a4,B4,C4,A4,X4,Y4,Z4,b4,c4,P4,S4,AREA4,Ma4,Mb4,Mc4,ha4,hb4,hc4;
+							cout<<"              UNIV. TARQUI TICONA CARLOS JAVIER          "<<endl;
+							cout<<"INGRESE EL LADO a"<<endl;
+							cin>> a4;
+							cout<<"INGRESE EL ANGULO C (GRADOS)"<<endl;
+							cin>> C4;
+							cout<<"INGRESE EL ANGULO A (GRADOS)"<<endl;
+							cin>> A4;
+							B4 = 180-C4-A4;
+							X4 = A4*0.017533;
+							Y4 = B4*0.017533;
+							Z4 = C4*0.017533;
+							b4 = (a4*sin(Y4))/(sin(X4));
+							c4 = (a4*sin(Z4))/(sin(X4));
+							P4 = a4+b4+c4;
+							S4 = P4/2;
+							AREA4 = sqrt(S4*(S4-a4)*(S4-b4)*(S4-c4));
+							Ma4 = (sqrt(2*((b4*b4)+(c4*c4))-(a4*a4)))/2;
+							Mb4 = (sqrt(2*((a4*a4)+(c4*c4))-(b4*b4)))/2;
+							Mc4 = (sqrt(2*((a4*a4)+(b4*b4))-(c4*c4)))/2;
+							ha4 = (2*AREA4)/a4;
+							hb4 = (2*AREA4)/b4;
+							hc4 = (2*AREA4)/c4;
+							cout<<"EL PERIMETRO ES DE: "<<P4<<"[u]"<<endl;
+							cout<<"EL AREA ES DE: "<<AREA4<<"[u^2]"<<endl;
+							cout<<"EL LADO b ES DE: "<<b4<<"[u]"<<endl;
+							cout<<"EL LASO c ES DE: "<<c4<<"[u]"<<endl;
+							cout<<"EL ANGULO B ES DE: "<<A4<<"°"<<endl;
+							cout<<"LA MEDIANA DE Ma ES DE: "<<Ma4<<"[u]"<<endl;
+				            cout<<"LA MEDIANA DE Mb ES DE: "<<Mb4<<"[u]"<<endl;
+				            cout<<"LA MEDIANA DE Mc ES DE: "<<Mc4<<"[u]"<<endl;
+				            cout<<"LA ALTURA DE ha ES DE: "<<ha4<<"[u]"<<endl;
+			            	cout<<"LA ALTURA DE hb ES DE: "<<hb4<<"[u]"<<endl;
+			            	cout<<"LA ALTURA DE hc ES DE: "<<hc4<<"[u]"<<endl;
+
+			            	system ("pause");
+			            break;	
+	    			}
+			   }
 			case 1:
 				system("cls");
 				float a,b,c,M,N,X,W,Z,P,s,AREA,Ma,Mb,Mc,ha,hb,hc;
@@ -61,8 +152,8 @@ main ()
 			break;
 			
 			case 2:
-				int op;
-				while (op !=2)
+				int opcion;
+				while (opcion !=2)
 				{
 					cout<<"1) SE CONOCE DOS LADOS Y EL ANGULO QUE FORMAN ESTOS"<<endl;
 					cout<<"2) SE CONOCE DOS LADOS Y UN ANGULO DIFERENTE AL QUE FORMAN ESTOS"<<endl;
@@ -150,100 +241,8 @@ main ()
 			    
 				        break;	
 	
-			case 3:
-				int op;
-				while (op !=2)
-				{
-					cout<<"1) SE CONOCE UN LADO Y DOS ANGULOS ADYACENTE"<<endl;
-					cout<<"2) SE CONOCE UN LADO Y UN DE LOS ANGULOS ADYACENTE Y EL OTRO ANGULO, EL OPUESTO"<<endl;
-					cin>>op;
-					
-					switch (op)
-					{
-						case 1:
-							system("cls");
-							float a3,B3,C3,A3,X3,Y3,Z3,b3,c3,P3,S3,AREA3,Ma3,Mb3,Mc3,ha3,hb3,hc3;
-							cout<<"              UNIV. TARQUI TICONA CARLOS JAVIER          "<<endl;
-							cout<<"INGRESE EL LADO a"<<endl;
-							cin>> a3;
-							cout<<"INGRESE EL ANGULO B (GRADOS)"<<endl;
-							cin>> B3;
-							cout<<"INGRESE EL ANGULO C (GRADOS)"<<endl;
-							cin>> C3;
-							A3 = 180-B3-C3;
-							X3 = A3*0.017533;
-							Y3 = B3*0.017533;
-							Z3 = C3*0.017533;
-							b3 = (a3*sin(Y3))/(sin(X3));
-							c3 = (a3*sin(Z3))/(sin(X3));
-							P3 = a3+b3+c3;
-							S3 = P3/2;
-							AREA3 = sqrt(S3*(S3-a3)*(S3-b3)*(S3-c3));
-							Ma3 = (sqrt(2*((b3*b3)+(c3*c3))-(a3*a3)))/2;
-							Mb3 = (sqrt(2*((a3*a3)+(c3*c3))-(b3*b3)))/2;
-							Mc3 = (sqrt(2*((a3*a3)+(b3*b3))-(c3*c3)))/2;
-							ha3 = (2*AREA3)/a3;
-							hb3 = (2*AREA3)/b3;
-							hc3 = (2*AREA3)/c3;
-							cout<<"EL PERIMETRO ES DE: "<<P3<<"[u]"<<endl;
-							cout<<"EL AREA ES DE: "<<AREA3<<"[u^2]"<<endl;
-							cout<<"EL LADO b ES DE: "<<b3<<"[u]"<<endl;
-							cout<<"EL LASO c ES DE: "<<c3<<"[u]"<<endl;
-							cout<<"EL ANGULO A ES DE: "<<A3<<"°"<<endl;
-							cout<<"LA MEDIANA DE Ma ES DE: "<<Ma3<<"[u]"<<endl;
-				            cout<<"LA MEDIANA DE Mb ES DE: "<<Mb3<<"[u]"<<endl;
-				            cout<<"LA MEDIANA DE Mc ES DE: "<<Mc3<<"[u]"<<endl;
-				            cout<<"LA ALTURA DE ha ES DE: "<<ha3<<"[u]"<<endl;
-			            	cout<<"LA ALTURA DE hb ES DE: "<<hb3<<"[u]"<<endl;
-			            	cout<<"LA ALTURA DE hc ES DE: "<<hc3<<"[u]"<<endl;
-			            	
-			            	system ("pause");
-			            break;
-			            
-			            case 2:
-			            	system("cls");
-							float a4,B4,C4,A4,X4,Y4,Z4,b4,c4,P4,S4,AREA4,Ma4,Mb4,Mc4,ha4,hb4,hc4;
-							cout<<"              UNIV. TARQUI TICONA CARLOS JAVIER          "<<endl;
-							cout<<"INGRESE EL LADO a"<<endl;
-							cin>> a4;
-							cout<<"INGRESE EL ANGULO C (GRADOS)"<<endl;
-							cin>> C4;
-							cout<<"INGRESE EL ANGULO A (GRADOS)"<<endl;
-							cin>> A4;
-							B4 = 180-C4-A4;
-							X4 = A4*0.017533;
-							Y4 = B4*0.017533;
-							Z4 = C4*0.017533;
-							b4 = (a4*sin(Y4))/(sin(X4));
-							c4 = (a4*sin(Z4))/(sin(X4));
-							P4 = a4+b4+c4;
-							S4 = P4/2;
-							AREA4 = sqrt(S4*(S4-a4)*(S4-b4)*(S4-c4));
-							Ma4 = (sqrt(2*((b4*b4)+(c4*c4))-(a4*a4)))/2;
-							Mb4 = (sqrt(2*((a4*a4)+(c4*c4))-(b4*b4)))/2;
-							Mc4 = (sqrt(2*((a4*a4)+(b4*b4))-(c4*c4)))/2;
-							ha4 = (2*AREA4)/a4;
-							hb4 = (2*AREA4)/b4;
-							hc4 = (2*AREA4)/c4;
-							cout<<"EL PERIMETRO ES DE: "<<P4<<"[u]"<<endl;
-							cout<<"EL AREA ES DE: "<<AREA4<<"[u^2]"<<endl;
-							cout<<"EL LADO b ES DE: "<<b4<<"[u]"<<endl;
-							cout<<"EL LASO c ES DE: "<<c4<<"[u]"<<endl;
-							cout<<"EL ANGULO B ES DE: "<<A4<<"°"<<endl;
-							cout<<"LA MEDIANA DE Ma ES DE: "<<Ma4<<"[u]"<<endl;
-				            cout<<"LA MEDIANA DE Mb ES DE: "<<Mb4<<"[u]"<<endl;
-				            cout<<"LA MEDIANA DE Mc ES DE: "<<Mc4<<"[u]"<<endl;
-				            cout<<"LA ALTURA DE ha ES DE: "<<ha4<<"[u]"<<endl;
-			            	cout<<"LA ALTURA DE hb ES DE: "<<hb4<<"[u]"<<endl;
-			            	cout<<"LA ALTURA DE hc ES DE: "<<hc4<<"[u]"<<endl;
-
-			            	system ("pause");
-			            break;				
-    				}
 					}	
-				}
 				}	
 		}
 	}	
 }
-
