@@ -1,0 +1,202 @@
+#include <iostream>
+	#include <math.h>
+	
+	using namespace std;
+	main ()
+	{
+		int op;
+		while (op !=3)
+		{
+			cout<<"                    UNIV. TARQUI TICONA CARLOS JAVIER          "<<endl;
+			cout<<"------------------------------------------------------------------------------------"<<endl;
+			cout<<"                1) DIVIDENDO GRADO 6 Y DIVISOR GRADO 3"<<endl;
+			cout<<"                2) DIVIDENDO GRADO 5 Y DIVISOR GRADO 3"<<endl;
+			cout<<"                3) DIVIDENDO GRADO 5 Y DIVISOR GRADO 2"<<endl;
+			cout<<"                4) DIVIDENDO GRADO 4 Y DIVISOR GRADO 2"<<endl;
+			cout<<"------------------------------------------------------------------------------------"<<endl;
+			cout<<"                    SELECCIONE LA OPCION QUE DESEE: ";
+			cin>>op;
+		switch(op)
+		{
+			case 4:
+	
+				system("cls");
+				float a4,a3,a2,a1,a0,b2,b1,b0,c1,c2,c3,c4,c5,cp,cp1,cp2,cp3,cp4,cp5;	
+				cout<<" PARA EL DIVIDENDO."<<endl;			
+				 cout<<" INGRESE x^4: "<<endl;
+				cin>>  a4;
+				   cout<<" INGRESE x^3: "<<endl;
+				 cin>>  a3;
+				cout<<" INGRESE x^2: "<<endl;
+				   cin>>  a2;
+				 cout<<" INGRESE x^1: "<<endl;
+				 cin>>  a1;
+				cout<<" INGRESE x^0: "<<endl;
+				   cin>>  a0;
+				   cout<<" PARA EL DIVISOR."<<endl;			
+				   cout<<" INGRESE x^2: "<<endl;
+				 cin>>  b2;
+				cout<<" INGRESE x^1: "<<endl;
+				cin>>  b1;
+				 cout<<" INGRESE x^0: "<<endl;
+				 cin>>  b0;
+				 c1 = a4/b2;
+				 cp = (c1*(-b1));
+				  c2 = (cp+a3)/b2;
+				   cp1 = (c1*(-b0));
+				 cp2 = (c2*(-b1));
+				 c3 = (cp1+cp2+a2)/b2;
+				 cp3 = (c2*(-b0));
+				   cp4 = (c3*(-b1));
+				   cp5 = (c3*(-b0));
+				 c4 = cp3+cp4+a1;
+				 c5 = cp5+a0;
+				 cout<<" EL COCIENTE ES: Q(x) = "<<c1<<"x^2 + "<<c2<<"x + "<<c3<<endl;
+				 cout<<" EL RESIDUO ES: R(x) = "<<c4<<"x "<<c5<<endl;
+				  system("pause");
+			break;
+			
+			case 2:
+	
+				system("cls");
+				float x5,x4,x3,x2,x1,x0,y3,y2,y1,y0,C1,C2,C3,C4,C5,C6,C1P,C2P,C3P,C4P,C5P,C6P,C7P,C8P,C9P;
+				cout<<" PARA EL DIVIDENDO."<<endl;		
+				cout<<" INGRESE x^5: "<<endl;
+				cin>>  x5;
+				cout<<" INGRESE x^4: "<<endl;
+				   cin>>  x4;
+				   cout<<" INGRESE x^3: "<<endl;
+				 cin>>  x3;
+				cout<<" INGRESE x^2: "<<endl;
+				   cin>>  x2;
+				 cout<<" INGRESE x^1: "<<endl;
+				 cin>>  x1;
+				cout<<" INGRESE x^0: "<<endl;
+				   cin>>  x0;
+				   cout<<" PARA EL DIVISOR."<<endl;	
+				   cout<<" INGRESE x^3: "<<endl;
+				 cin>>  y3;		
+				   cout<<" INGRESE x^2: "<<endl;
+				 cin>>  y2;
+				cout<<" INGRESE x^1: "<<endl;
+				cin>>  y1;
+				 cout<<" INGRESE x^0: "<<endl;
+				 cin>>  y0;
+				 C1 = x5/y3;
+				 C1P = C1*(-y2);
+				 C2P = C1*(-y1);
+				 C3P = C1*(-y0);
+				 C2 = (C1P+x4)/y3;
+				 C4P = C2*(-y2);
+				 C5P = C2*(-y1);
+				 C6P = C2*(-y0);
+				 C3 = (C2P+C4P+x3)/y3;
+				 C7P = C3*(-y2);
+				 C8P = C3*(-y1);
+				 C9P = C3*(-y0);
+				 C4 = C3P+C5P+C7P+x2;
+				 C5 = C6P+C8P+x1;
+				 C6 = C9P+x0;
+				 cout<<" EL COCIENTE ES: Q(x) = "<<C1<<"x^2 + "<<C2<<"x + "<<C3<<endl;
+				 cout<<" EL RESIDUO ES: R(x) = "<<C4<<"x^2 "<<C5<<"x + "<<C6<<endl;
+				  system("pause");
+			break;
+			
+			case 3:
+	
+				system("cls");
+				float Z5,Z4,Z3,Z2,Z1,Z0,W2,W1,W0,R1,R2,R3,R4,R5,R6,R1P,R2P,R3P,R4P,R5P,R6P,R7P,R8P;
+				cout<<" PARA EL DIVIDENDO."<<endl;	
+				cout<<" INGRESE x^5: "<<endl;
+				cin>>  Z5;	
+				cout<<" INGRESE x^4: "<<endl;
+				   cin>>  Z4;
+				   cout<<" INGRESE x^3: "<<endl;
+				 cin>>  Z3;
+				cout<<" INGRESE x^2: "<<endl;
+				   cin>>  Z2;
+				 cout<<" INGRESE x^1: "<<endl;
+				 cin>>  Z1;
+				cout<<" INGRESE x^0: "<<endl;
+				   cin>>  Z0;
+				   cout<<" PARA EL DIVISOR."<<endl;		
+				   cout<<" INGRESE x^2: "<<endl;
+				 cin>>  W2;
+				cout<<" INGRESE x^1: "<<endl;
+				cin>>  W1;
+				 cout<<" INGRESE x^0: "<<endl;
+				 cin>>  W0;
+				R1 = Z5/W2;
+				R1P = R1*(-W1);
+				R2P = R1*(-W0);
+				R2 = (R1P+Z4)/W2;
+				R3P = R2*(-W1);
+				R4P = R2*(-W0);
+				R3 = (R2P+R3P+Z3)/W2;
+				R5P = R3*(-W1);
+				R6P = R3*(-W0);
+				R4 = (R4P+R5P+Z2)/W2;
+				R7P = R4*(-W1);
+				R8P = R4*(-W0);
+				R5 = (R6P+R7P+Z1);
+				R6 = (R8P+Z0);
+				 cout<<" EL COCIENTE ES: Q(x) = "<<R1<<"x^3 + "<<R2<<"x^2 "<<R3<<"x + "<<R4;
+				 cout<<" EL RESIDUO ES: R(x) = "<<R5<<"x "<<R6;
+				  system("pause");
+			break;
+			
+			case 1:
+	
+				system("cls");
+				float T6,T5,T4,T3,T2,T1,T0,U3,U2,U1,U0,V1,V2,V3,V4,V5,V6,V7,V1P,V2P,V3P,V4P,V5P,V6P,V7P,V8P,V9P,V10P,V11P,V12P;
+				cout<<" PARA EL DIVIDENDO."<<endl;	
+				cout<<" INGRESE x^6: "<<endl;
+				cin>>  T6;
+				cout<<" INGRESE x^5: "<<endl;
+				cin>>  T5;	
+				cout<<" INGRESE x^4: "<<endl;
+				   cin>>  T4;
+				   cout<<" INGRESE x^3: "<<endl;
+				 cin>>  T3;
+				cout<<" INGRESE x^2: "<<endl;
+				   cin>>  T2;
+				 cout<<" INGRESE x^1: "<<endl;
+				 cin>>  T1;
+				cout<<" INGRESE x^0: "<<endl;
+				   cin>>  T0;
+				   cout<<" PARA EL DIVISOR."<<endl;	
+				cout<<" INGRESE x^3: "<<endl;
+				cin>>  U3;	
+				   cout<<" INGRESE x^2: "<<endl;
+				 cin>>  U2;
+				cout<<" INGRESE x^1: "<<endl;
+				cin>>  U1;
+				 cout<<" INGRESE x^0: "<<endl;
+				 cin>>  U0;
+				 V1 = T6/U3;
+				V1P = V1*(-U2);
+				V2P = V1*(-U1);
+				V3P = V1*(-U0);
+				V2 = (V1P+T5)/U3;
+				V4P = V2*(-U2);
+				V5P = V2*(-U1);
+				V6P = V2*(-U0);	
+				V3 = (V2P+V4P+T4)/U3;
+				V7P = V3*(-U2);
+				V8P = V3*(-U1);
+				V9P = V3*(-U0);			
+				V4 = (V3P+V5P+V7P+T3)/U3;
+				V10P = V4*(-U2);
+				V11P = V4*(-U1);
+				V12P = V4*(-U0);
+				V5 = V6P+V8P+V10P+T2;
+				V6 = V9P+V11P+T1;
+				V7 = V12P+T0;		 
+				 cout<<" EL COCIENTE ES: Q(x) = "<<V1<<"x^3 "<<V2<<"x^2 + "<<V3<<"x + "<<V4<<endl;
+				 cout<<" EL RESIDUO ES: R(x) = "<<V5<<"x^2 "<<V6<<"x "<<V7<<endl;
+				  system("pause");
+			break;
+		}
+		}
+		
+	}
