@@ -1,6 +1,6 @@
 // UNIV. TARQUI TICONA CARLOS JAVIER 
 // LABORATORIO 2 - PROGRAMACION
-// DOS ECUACIONES CON DOS INCOGNITAS
+// RESOLUCION DE TRIANGULO
 
 
 #include <iostream> 
@@ -11,17 +11,34 @@ main ()
 {
 	int op;
 	
-	while(op !=5)
+	while(op !=3)
 	{
+		cout<<"                      UNIV. TARQUI TICONA CARLOS JAVIER     "<<endl;
+		cout<<"         EL TRIANGULO ESTA DADO POR EL SIGUIENTE MODO. TOMAR NOTA:      "<<endl;
+		cout<<"                              B    "<<endl;
+		cout<<"                              *    "<<endl;
+		cout<<"                             * *    "<<endl;
+		cout<<"                            *   *    "<<endl;
+		cout<<"                           *     *    "<<endl;
+		cout<<"                          *       *    "<<endl;
+		cout<<"                       c *         * a  "<<endl;
+		cout<<"                        *           *    "<<endl;
+		cout<<"                       *             *    "<<endl;
+		cout<<"                      *               *    "<<endl;
+		cout<<"                     *                 *    "<<endl;
+		cout<<"                    *                   *    "<<endl;
+		cout<<"                 A *********************** C    "<<endl;
+		cout<<"                              b                   "<<endl;
 		cout<<"1) SABIENDO LOS TRES LADOS"<<endl;
-		cout<<"2) SABIENDO LOS TRES LADOS"<<endl;
+		cout<<"2) SABIENDO LOS TRES ANGULOS"<<endl;
 		cout<<"3) SABIENDO DOS ANGULOS Y UN LADO"<<endl;
-		cout<<"SELECIONE LA OPCION QUE DESEE: ";
+		cout<<"4) SABIENDO UN ANGULOS Y DOS LADO"<<endl;
+		cout<<"SELECCIONE LA OPCION QUE DESEE: ";
 		cin>>op;
 		
 		switch(op)
 		{
-			case 3:
+			case 4:
 				int eligir;
 				while (eligir !=2)
 				{
@@ -122,6 +139,16 @@ main ()
 				cin>>b;
 				cout<<"INGRESE EL LADO c"<<endl;
 				cin>>c;
+				if(((a+b)>c) && ((a+c)>b) && ((b+c)>a)){
+					if (a == b && b == c ){
+						cout<<" ES UN TRIANGULO EQUILATERO."<<endl;
+					}
+					else if ( a == b  || b == c || a == c){
+						cout<<" ES UN TRIANGULO ISOSCELES."<<endl;
+					}
+					else {
+						cout<<" ES UN TRIANGULO ESCALENO"<<endl;
+					}
 				M = acos(((b*b)+(c*c)-(a*a))/(2*b*c));
 				N = acos(((a*a)+(c*c)-(b*b))/(2*a*c));
 				X = M*57.2958;
@@ -150,8 +177,35 @@ main ()
 				
 				system("pause");
 			break;
+				}
+				else{
+					cout<<" NO CORRESPONDE A UN TRIANGULO"<<endl;
+				}
+				system("pause");
+			break;
 			
 			case 2:
+				system("cls");
+				float a23,b23,c23,z23;
+				cout<<"INGRESE EL ANGULO A (GRADOS):"<<endl;
+				cin>> a23;
+				cout<<" INGRESE EL ANGULO B (GRADOS): "<<endl;
+				cin>> b23;
+				cout<<" INGRESE EL ANGULO C (GRADOS): "<<endl;
+				cin>> c23;
+				z23 = a23+b23+c23;
+				
+				if(z23 !=180){
+					cout<<"LA SUMA DE LOS ANGULOS DEBE SER 180 (GRADOS), INGRESE NUEVAMENTE Y VERIFIQUE SUS DATOS "<<endl;
+				}
+				else{
+					cout<<" NO SE PUEDE CALCULAR SUS LADOS CONOCIENDO UNICAMENTE SUS LADOS, PERO SI SE PUEDE CALCULAR CONOCIENDO POR LO MENOS UN LADO"<<endl;
+				}
+				
+				system("pause");
+			break;
+			
+			case 3:
 				int opcion;
 				while (opcion !=2)
 				{
