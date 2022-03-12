@@ -27,33 +27,18 @@ int main(){
 	cin>>numVar;
 	var = new double[numVar];			
 	
-	for(int i=0;i<numVar;i++){
+	for(int i=0;i<numVar;i++)
+	{
 		cout<<" INGRESE LOS VALORES DE LA MATRIZ: "<<i<<": ";
 		cin>>var[i];		
-		
 	}
 	
 	double matrix[numVar][numVar];
-	
-	/*cout<<"\n\nMostrando matriz con las variables elegidas:\n";
-	for(int i=0;i<numVar;i++){
-		cout<<var[i]<<endl;
-	}*/
-
 	for (int i = 0; i < numVar; i++) {
    		for (int j = 0; j < numVar; j++) {
 				matrix[i][j]=pow(var[i],j);
 		}
 	}
-	
-	/*(var[numvar-1]-var[numvar-2])(var[numvar-1]-var[numvar-3]).....(var[numvar-1]-var[numvar-numvar])
-	(var[numvar-2]-var[numvar-3])(var[numvar-2]-var[numvar-4]).....(var[numvar-2]-var[numvar-numvar])
-	..
-	..(multiplicar)
-	..
-	(var[numvar-numvar+1]-var[numvar-numvar])
-	*/
-		
 	int det = 1;
 	for(int i=1; i < numVar; i++){
 		for(int j=i+1; j <= numVar; j++){
@@ -71,8 +56,7 @@ int main(){
       }
       cout << "\n";
    	}
-   	
-   	
+
 	if (numVar==1){
 		cout<<" \n\nEL DETERMINANTE DE LA MATRIZ ES "<<var[0];
 		
