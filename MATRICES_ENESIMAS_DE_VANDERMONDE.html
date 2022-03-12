@@ -1,33 +1,44 @@
 // UNIV. TARQUI TICONA CARLOS JAVIER
-// PROGRAMACION - LABORTATORIO2 
-// MATRIZ
-
+// LABORTATORIO 2 - PROGRAMACION
+// MATRIZ DE VANDERMONDE
 
 #include <iostream>
 #include <cmath>
 #include <stdlib.h> 
+
 using namespace std;
 
 int main(){
 	int numVar;
 	double *var;
 	
-	cout<<"digite el total de variables: ";
+	cout<<"                  UNIV. TARQUI TICONA CARLOS JAVIER "<<endl;
+	cout<<"      EL PRESENTE PROGRAMA, DARA SU ORDEN DE LA MATRIZ, LA MATRIZ DE VANDERMONDE Y SU DETERMINANTE "<<endl;
+	cout<<" -----------------------------------------------------------------------------"<<endl;
+	cout<<" EL INGRESO DE LA MATRIZ ES LA SIGUIENTE. TOMAR NOTA"<<endl;
+	cout<<"                      _                                          _"<<endl;
+	cout<<"                     | 1      0        0^2      ...      0^n-1    | "<<endl;
+	cout<<"                     | 1      1        1^2      ...      1^n-1    | "<<endl;
+	cout<<"                     | 1      2        2^2      ...      2^n-1    | "<<endl;
+	cout<<"                     | 1      :         :        :         :      | "<<endl;
+	cout<<"                     | 1    (n-1)    (n-1)^2     ...   (n-1)^n-1  | "<<endl;
+	cout<<"                      -                                           -"<<endl;
+	cout<<" INGRESE EL ORDEN DE LA MATRIZ QUE DESEE, (ES DECIR,EL VALOR DE n) : ";
 	cin>>numVar;
-	var = new double[numVar];			//crear el arreglo
+	var = new double[numVar];			
 	
 	for(int i=0;i<numVar;i++){
-		cout<<"elija un valor a la variable "<<i<<": ";
-		cin>>var[i];		//o tambien *(var+i);
+		cout<<" INGRESE LOS VALORES DE LA MATRIZ: "<<i<<": ";
+		cin>>var[i];		
 		
 	}
 	
 	double matrix[numVar][numVar];
 	
-	cout<<"\n\nMostrando matriz con las variables elegidas:\n";
+	/*cout<<"\n\nMostrando matriz con las variables elegidas:\n";
 	for(int i=0;i<numVar;i++){
 		cout<<var[i]<<endl;
-	}
+	}*/
 
 	for (int i = 0; i < numVar; i++) {
    		for (int j = 0; j < numVar; j++) {
@@ -35,13 +46,13 @@ int main(){
 		}
 	}
 	
-	(var[numvar-1]-var[numvar-2])(var[numvar-1]-var[numvar-3]).....(var[numvar-1]-var[numvar-numvar])
+	/*(var[numvar-1]-var[numvar-2])(var[numvar-1]-var[numvar-3]).....(var[numvar-1]-var[numvar-numvar])
 	(var[numvar-2]-var[numvar-3])(var[numvar-2]-var[numvar-4]).....(var[numvar-2]-var[numvar-numvar])
 	..
 	..(multiplicar)
 	..
 	(var[numvar-numvar+1]-var[numvar-numvar])
-	
+	*/
 		
 	int det = 1;
 	for(int i=1; i < numVar; i++){
@@ -50,9 +61,10 @@ int main(){
 			
 		}
 	}
-		
-	cout << "\nMostrando la Matriz Vandermonde:\n";
-	cout << "Orden: " << numVar << endl;
+	
+	cout << " LA MATRIZ ES DE ORDEN: " << numVar << endl;		
+	cout << " \nLA MATRIZ DE VANDEROMONDE ES LA SIGUIENTE:\n";
+
    	for (int i = 0; i < numVar; i++) {
       for (int j = 0; j < numVar; j++) {
          cout << matrix[i][j]<<"	";
@@ -62,12 +74,13 @@ int main(){
    	
    	
 	if (numVar==1){
-		cout<<"\n\nEl determinante es: "<<var[0];
+		cout<<" \n\nEL DETERMINANTE DE LA MATRIZ ES "<<var[0];
 		
 	}else{
-		cout<<"\n\nEl determinante es: "<<det;
+		cout<<" \n\nEL DETERMINANTE DE LA MATRIZ ES: "<<det;
 	}
 	
 	delete[] var;		
+	
 	return 0;
 }
